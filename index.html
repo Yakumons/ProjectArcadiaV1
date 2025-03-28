@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT ARCADIA</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Play:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/features.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container animate-slide-in">
+            <h1>PROJECT<span>ARCADIA</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><button class="login-button" id="signInBtn">Sign In</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign In</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password" required>
+                </div>
+                <div class="error-message"></div>
+                <button type="submit" class="submit-btn">Sign In</button>
+                <div class="form-footer">
+                    <p>Don't have an account? <a href="#" id="registerLink">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content animate-fade-in">
+                <h2>PROJECT ARCADIA</h2>
+                <p class="section-text">No contribution is too small. No idea is too crazy. Together, we can turn the impossible into the inevitable.</p>
+                <button class="cta-button animate-pulse">JOIN THE VISION</button>
+            </div>
+        </section>
+
+        <section id="home" class="content-section">
+            <div class="section-container">
+                <h2 class="section-title">Home</h2>
+                <div class="section-content">
+                    <p class="section-text">Imagine a world where technology, nature, and human potential work together seamlessly. That's what Project Arcadia is all about. We're not just dreaming about a better future – we're actively working to create it.</p>
+                    <p class="section-text">Our vision is simple but powerful: build a global community where everyone has a chance to thrive, where sustainability isn't just a buzzword, but a way of life.</p>
+                    <p class="section-text">We believe that when people come together with real purpose, incredible things can happen. From reimagining our cities to rethinking how we connect with each other and our planet, Project Arcadia is about turning bold ideas into real solutions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <div class="section-container">
+                <h2 class="section-title">About Us</h2>
+                <div class="section-content">
+                    <p class="section-text">Project Arcadia started with a conversation. A conversation about what's wrong with our current world, but more importantly, about what could be right. We're a group of dreamers, engineers, environmentalists, and community builders who refuse to accept that the world has to be the way it is right now.</p>
+                    <p class="section-text">Our approach is simple. We look at global challenges – climate change, social inequality, economic instability – and we ask, "How can we solve this differently?" We don't just want quick fixes. We want fundamental, transformative change that creates opportunities for everyone.</p>
+                    <p class="section-text">Sustainability isn't just about protecting the environment. It's about creating systems where humans and nature can coexist and support each other. Innovation isn't just about creating new technology. It's about solving real human problems. Unity isn't just a nice idea – it's a necessity for our survival and growth.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <div class="section-container">
+                <h2 class="section-title">Contact</h2>
+                <div class="section-content">
+                    <p class="section-text">Want to be part of something bigger? We're always looking for people who are passionate about creating positive change. Whether you're an expert in renewable energy, a community organizer, or someone who simply believes we can do better, there's a place for you in Project Arcadia.</p>
+                    <p class="section-text">Drop us a line at <a href="mailto:connect@projectarcadia.org" class="highlight-link">connect@projectarcadia.org</a>. Tell us your story, your ideas, your vision. We don't just want supporters – we want collaborators who are ready to roll up their sleeves and build a better world.</p>
+                    <p class="section-text">No contribution is too small. No idea is too crazy. Together, we can turn the impossible into the inevitable.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2 class="section-title animate-fade-in">UTOPIA FEATURES</h2>
+            <div class="card-container">
+                <div class="card animate-float" onclick="openFeatureModal('sustainability')">
+                    <div class="card-icon">🌱</div>
+                    <h3>SUSTAINABILITY</h3>
+                    <p>Advanced eco-friendly technologies</p>
+                </div>
+                <div class="card animate-float" style="animation-delay: 0.2s" onclick="openFeatureModal('harmony')">
+                    <div class="card-icon">🤝</div>
+                    <h3>HARMONY</h3>
+                    <p>Universal peace and cooperation</p>
+                </div>
+                <div class="card animate-float" style="animation-delay: 0.4s" onclick="openFeatureModal('innovation')">
+                    <div class="card-icon">⚡</div>
+                    <h3>INNOVATION</h3>
+                    <p>Revolutionary living standards</p>
+                </div>
+            </div>
+
+            <div id="sustainabilityModal" class="feature-modal">
+                <div class="feature-content sustainability-theme">
+                    <span class="close-feature">&times;</span>
+                    <div class="feature-header">
+                        <div class="feature-icon">🌱</div>
+                        <h2>SUSTAINABILITY INITIATIVES</h2>
+                    </div>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <div class="feature-image">
+                                <img src="images/cleanEnergySystems.jpg" alt="Clean Energy Systems" loading="lazy">
+                            </div>
+                            <h3>Clean Energy Systems</h3>
+                            <p>Advanced fusion reactors and quantum solar collectors providing unlimited clean energy.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-image">
+                                <img src="images/VerticalAgriculture.jpg" alt="Vertical Agriculture" loading="lazy">
+                            </div>
+                            <h3>Vertical Agriculture</h3>
+                            <p>Self-sustaining vertical farms producing organic food for entire communities.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-image">
+                                <img src="images/ZeroWasteTechnology.jpg" alt="Zero-Waste Technology" loading="lazy">
+                            </div>
+                            <h3>Zero-Waste Technology</h3>
+                            <p>Molecular recycling systems that transform waste into valuable resources.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="harmonyModal" class="feature-modal">
+                <div class="feature-content harmony-theme">
+                    <span class="close-feature">&times;</span>
+                    <div class="feature-header">
+                        <div class="feature-icon">🤝</div>
+                        <h2>GLOBAL HARMONY</h2>
+                    </div>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <div class="feature-image">
+                                <img src="images/UniversalBasicProsperity.jpg" alt="Universal Basic Prosperity" loading="lazy">
+                            </div>
+                            <h3>Universal Basic Prosperity</h3>
+                            <p>Economic systems ensuring everyone's basic needs are met through advanced resource distribution.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-image">
+                                <img src="images/GlobalEducationNetwork.jpg" alt="Global Education Network" loading="lazy">
+                            </div>
+                            <h3>Global Education Network</h3>
+                            <p>Free access to advanced learning systems and knowledge sharing platforms.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-image">
+                                <img src="images/ConflictResolutionAi.jpg" alt="Conflict Resolution AI" loading="lazy">
+                            </div>
+                            <h3>Conflict Resolution AI</h3>
+                            <p>Advanced AI systems helping maintain peace through diplomatic solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="innovationModal" class="feature-modal">
+                <div class="feature-content innovation-theme">
+                    <span class="close-feature">&times;</span>
+                    <div class="feature-header">
+                        <div class="feature-icon">⚡</div>
+                        <h2>TECHNOLOGICAL INNOVATION</h2>
+                    </div>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <div class="feature-image">
+                                <img src="images/QuantumComputing.jpg" alt="Quantum Computing" loading="lazy">
+                            </div>
+                            <h3>Quantum Computing</h3>
+                            <p>Revolutionary computing systems solving humanity's most complex challenges.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-image">
+                                <img src="images/AdvancedHealthCare.jpg" alt="Advanced HealthCare" loading="lazy">
+                            </div>
+                            <h3>Advanced Healthcare</h3>
+                            <p>Nanomedicine and genetic healing technologies for perfect health.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-image">
+                                <img src="images/SpaceExploration.jpg" alt="Space Exploration" loading="lazy">
+                            </div>
+                            <h3>Space Exploration</h3>
+                            <p>Interstellar travel capabilities expanding human horizons beyond Earth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 PROJECT ARCADIA</p>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/features.js"></script>
+</body>
+</html>
